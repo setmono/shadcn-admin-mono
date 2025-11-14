@@ -1,0 +1,7 @@
+@utility text-xxs {
+  font-size: 0.625rem; /* 10px */
+  line-height: var(
+    --tw-leading,
+    var(--text-xxs--line-height) /* calc(1 / 0.625) = 1.6 */
+  );
+}

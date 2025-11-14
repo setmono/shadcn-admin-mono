@@ -1,0 +1,145 @@
+{
+  "UI": {
+    "Cancel": "Cancel",
+    "Confirm": "Confirm",
+    "Continue": "Continue",
+    "Update": "Update",
+    "Command": "Command",
+    "Overview": "Overview",
+    "Projects": "Projects",
+    "Products": "Products",
+    "Devices": "Devices",
+
+    "Login": "Login",
+    "SingOut": "Sign Out",
+    "SignUp": "Sign Up",
+
+    "GoBack": "Go Back",
+    "BackToHome": "Back to Home",
+    "Search": "Search",
+
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System",
+
+    "Account": "Account",
+    "Profile": "Profile",
+    "Settings": "Settings",
+    "Language": "Language",
+    "Appearance": "Appearance",
+    "Notifications": "Notifications",
+
+    "Username": "Username",
+    "Email": "Email",
+    "Bio": "Bio",
+    "URLs": "URLs",
+    "Font": "Font",
+    "Theme": "Theme",
+    "Locale": "Locale",
+
+    "UpgradeToPro": "Upgrade to Pro",
+    "ToggleSidebar": "Toggle Sidebar",
+    "ToggleTheme": "Toggle Theme",
+    "UpdateSuccessful": "Update successful!"
+  },
+  "Sidebar": {
+    "General": "General",
+    "Dashboard": "Dashboard",
+    "Tasks": "Tasks",
+    "Apps": "Apps",
+    "Users": "Users",
+    "SecuredByClerk": "Secured by Clerk",
+    "SignIn": "Sign In",
+    "SignUp": "Sign Up",
+    "UserManagement": "User Management",
+    "Pages": "Pages",
+    "Auth": "Auth",
+    "SignIn2Col": "Sign In (2Col)",
+    "ForgotPassword": "Forgot Password",
+    "OTP": "OTP",
+    "Errors": "Errors",
+    "Unauthorized": "Unauthorized",
+    "Forbidden": "Forbidden",
+    "NotFound": "Not Found",
+    "InternalServerError": "Internal Server Error",
+    "MaintenanceError": "Maintenance Error",
+    "Other": "Other",
+    "Profile": "Profile",
+    "Settings": "Settings",
+    "Appearance": "Appearance",
+    "HelpCenter": "HelpCenter"
+  },
+  "Command": {
+    "Placeholder": "Type a command or search...",
+    "NoResultsFound": "No results found..."
+  },
+  "SignOut": {
+    "Description": "Are you sure you want to sign out? You will need to sign in again to access your account."
+  },
+  "NotFound": {
+    "Title": "Oops! Page Not Found!",
+    "Description": "It seems like the page you're looking for does not exist or might have been removed."
+  },
+  "GeneralError": {
+    "Wrong": "Oops! Something went wrong!",
+    "Apologize": "We apologize for the inconvenience. Please try again later."
+  },
+  "Settings": {
+    "Description": "Manage your account settings and set app preferences."
+  },
+  "Auth": {
+    "NotHaveAccount": "Don't have an account?",
+    "GoSignUp": "Go Sign Up",
+    "ForgotPassword": {
+      "Title": "Forgot Password",
+      "Description": "Enter your registered email and we will send you a link to reset your password."
+    }
+  },
+  "Email": {
+    "Sending": "Sending email...",
+    "Validation": {
+      "Empty": "Please enter your email.",
+      "Invalid": "Invalid email address."
+    }
+  },
+  "Profile": {
+    "Description": "This is how others will see you on the site.",
+    "Username": {
+      "Placeholder": "Enter your username",
+      "Description": "This is your public display name. You can only change this once every 30 days.",
+      "Validation": {
+        "Empty": "Please enter your username.",
+        "Min": "Username must be at least 2 characters.",
+        "Max": "Username must not be longer than 30 characters."
+      }
+    },
+    "Email": {
+      "Placeholder": "Select a verified email to display",
+      "Description": "You can manage verified email addresses in your email settings.",
+      "Validation": {
+        "Empty": "Please select an email to display."
+      },
+      "GoEmailSetting": "Go to email setting"
+    },
+    "Bio": {
+      "Placeholder": "Tell us a little bit about yourself",
+      "Description": "You can @mention other users and organizations to link to them.",
+      "Validation": {
+        "Max": "Too long: expected string to have <= 120 characters"
+      }
+    }
+  },
+  "Appearance": {
+    "Description": "Customize the appearance of the app. Automatically switch between day and night themes.",
+    "Font": {
+      "Description": "Set the font you want to use in the app."
+    },
+    "Theme": {
+      "Description": "Select the theme for the app.",
+      "Validation": "Please select a theme first."
+    },
+    "Locale": {
+      "Description": "Select the locale for the app."
+    }
+  }
+}

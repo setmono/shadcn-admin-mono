@@ -1,0 +1,145 @@
+{
+  "UI": {
+    "Cancel": "取消",
+    "Confirm": "确认",
+    "Continue": "继续",
+    "Update": "更新",
+    "Command": "命令",
+    "Overview": "总览",
+    "Projects": "项目",
+    "Products": "产品",
+    "Devices": "设备",
+
+    "Login": "登录",
+    "SingOut": "登出",
+    "SignUp": "注册",
+
+    "GoBack": "返回",
+    "BackToHome": "返回首页",
+    "Search": "搜索",
+
+    "Light": "浅色",
+    "Dark": "深色",
+    "System": "跟随系统",
+
+    "Account": "账户",
+    "Profile": "个人资料",
+    "Settings": "设置",
+    "Language": "语言",
+    "Appearance": "外观",
+    "Notifications": "提醒",
+
+    "Username": "用户名",
+    "Email": "邮箱",
+    "Bio": "个人简介",
+    "URLs": "链接",
+    "Font": "字体",
+    "Theme": "主题",
+    "Locale": "地区",
+
+    "UpgradeToPro": "升级高级计划",
+    "ToggleSidebar": "切换侧边栏",
+    "ToggleTheme": "切换主题",
+    "UpdateSuccessful": "更新成功!"
+  },
+  "Sidebar": {
+    "General": "通用",
+    "Dashboard": "仪表盘",
+    "Tasks": "任务",
+    "Apps": "应用",
+    "Users": "用户",
+    "SecuredByClerk": "Clerk 集成",
+    "SignIn": "登录",
+    "SignUp": "注册",
+    "UserManagement": "用户管理",
+    "Pages": "页面",
+    "Auth": "认证",
+    "SignIn2Col": "登录（双栏）",
+    "ForgotPassword": "忘记密码",
+    "OTP": "一次性密码",
+    "Errors": "错误页面",
+    "Unauthorized": "未授权",
+    "Forbidden": "禁止访问",
+    "NotFound": "未找到页面",
+    "InternalServerError": "服务器内部错误",
+    "MaintenanceError": "维护中",
+    "Other": "其他",
+    "Settings": "设置",
+    "Profile": "个人资料",
+    "Appearance": "外观",
+    "HelpCenter": "帮助中心"
+  },
+  "Command": {
+    "Placeholder": "输入命令或搜索...",
+    "NoResultsFound": "没有找到结果..."
+  },
+  "SignOut": {
+    "Description": "您确定要登出吗？登出后需要重新登录才能访问您的账户。"
+  },
+  "NotFound": {
+    "Title": "哎呀！页面未找到！",
+    "Description": "看起来您访问的页面不存在，或者已被移除。"
+  },
+  "GeneralError": {
+    "Wrong": "哎呀！发生错误！",
+    "Apologize": "我们对给您带来的不便表示歉意，请稍后重试。"
+  },
+  "Settings": {
+    "Description": "管理您的账户设置并设置应用偏好。"
+  },
+  "Auth": {
+    "NotHaveAccount": "没有您的账户？",
+    "GoSignUp": "前往注册",
+    "ForgotPassword": {
+      "Title": "忘记密码",
+      "Description": "输入您注册的邮箱地址，我们将向您发送重置密码的链接。"
+    }
+  },
+  "Email": {
+    "Sending": "Email 发送中...",
+    "Validation": {
+      "Empty": "请输入您的邮箱地址。",
+      "Invalid": "无效的邮箱地址。"
+    }
+  },
+  "Profile": {
+    "Description": "这里是您个人资料的配置信息",
+    "Username": {
+      "Placeholder": "请输入您的用户名",
+      "Description": "这是您的公开显示名称，每 30 天只能修改一次。",
+      "Validation": {
+        "Empty": "请输入有效的用户名",
+        "Min": "内容过短：用户名应 >= 2 个字符",
+        "Max": "内容过长：用户名应 <= 30 个字符"
+      }
+    },
+    "Email": {
+      "Placeholder": "选择一个已验证的邮箱",
+      "Description": "您可以在邮箱设置中管理已验证邮箱。",
+      "Validation": {
+        "Empty": "请选择一个已验证的邮箱进行显示"
+      },
+      "GoEmailSetting": "前往邮箱设置"
+    },
+    "Bio": {
+      "Placeholder": "简单介绍一下自己",
+      "Description": "您可以使用 @ 提及其他用户或组织以创建链接。",
+      "Validation": {
+        "Max": "内容过多：输入的字符应 <= 120 个字符"
+      }
+    }
+  },
+  "Appearance": {
+    "Description": "自定义应用外观。可自动在浅色和深色主题之间切换。",
+    "Font": {
+      "Description": "设置您在应用中想使用的字体。"
+    },
+    "Theme": {
+      "Description": "选择应用的主题。",
+      "Validation": "请先选择一个主题。"
+    },
+    "Locale": {
+      "Description": "选择应用的地区设置。"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@mono/lib",
+  "type": "module",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "exports": {
+    "./*": "./*.ts",
+    "./locales/*.json": "./locales/*.json",
+    "./locales": {
+      "import": "./locales/index.ts",
+      "types": "./locales/index.ts"
+    }
+  }
+}
