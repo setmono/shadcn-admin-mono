@@ -1,13 +1,11 @@
-# NOTICE
+NOTICE
 
 This project includes code from other open-source projects under the MIT License.
 
-Specifically, some portions of this project use code from [shadcn-admin](https://github.com/satnaing/shadcn-admin):
+Specifically, some portions of this project use code from shadcn-admin:
 
-```txt
 Copyright (c) 2024 Sat Naing
-Licensed under the MIT License.
-<https://github.com/satnaing/shadcn-admin>
-```
+Licensed under the MIT License
+Source: <https://github.com/satnaing/shadcn-admin>
 
 All included MIT-licensed code retains its original copyright notice.
