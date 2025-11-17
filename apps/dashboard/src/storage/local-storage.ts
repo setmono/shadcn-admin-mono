@@ -1,5 +1,4 @@
-import type { LocaleCode } from "@mono/lib/locales/index";
-
+import type { LocaleCode } from "@/types/locales";
 import type { Font } from "@/components/context/font-provider";
 import type { Theme } from "@/components/context/theme-provider";
 

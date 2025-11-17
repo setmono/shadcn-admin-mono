@@ -8,8 +8,7 @@
     "start": "vite preview",
     "lint": "eslint .",
     "test": "vitest run",
-    "interface": "i18next-resources-for-ts interface -i ./src/configs/i18n/resources/en -o ./src/types/resources.d.ts",
-    "locales": "i18next-resources-for-ts toc -i ./src/configs/i18n/resources -o ./src/configs/i18n/locales.ts"
+    "interface": "i18next-resources-for-ts interface -i ./src/configs/i18n/resources/en -o ./src/types/resources.d.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
