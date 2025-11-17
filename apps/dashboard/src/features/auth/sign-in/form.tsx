@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { cn, sleep } from "@mono/lib/utils";
-import { Apple, Google } from "@mono/ui/assets/icons/index";
+import { Github, Google } from "@mono/ui/assets/icons/index";
 import { Button } from "@mono/ui/core/button";
 import {
   Form,
@@ -148,7 +148,7 @@ export function UserAuthForm({
             <Google className="size-4" /> Google
           </Button>
           <Button variant="outline" type="button" disabled={isLoading}>
-            <Apple className="size-4" /> GitHub
+            <Github className="size-4" /> GitHub
           </Button>
         </div>
       </form>
