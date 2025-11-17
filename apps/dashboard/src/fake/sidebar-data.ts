@@ -71,24 +71,24 @@ export const sidebarData: SidebarData = {
           url: "/users",
           icon: Users,
         },
-        // {
-        //   title: "SecuredByClerk",
-        //   icon: ClerkLogo,
-        //   items: [
-        //     {
-        //       title: "SignIn",
-        //       url: "/clerk/sign-in",
-        //     },
-        //     {
-        //       title: "SignUp",
-        //       url: "/clerk/sign-up",
-        //     },
-        //     {
-        //       title: "UserManagement",
-        //       url: "/clerk/user-management",
-        //     },
-        //   ],
-        // },
+        {
+          title: "SecuredByClerk",
+          icon: ClerkLogo,
+          items: [
+            {
+              title: "SignIn",
+              url: "/clerk/sign-in",
+            },
+            {
+              title: "SignUp",
+              url: "/clerk/sign-up",
+            },
+            {
+              title: "UserManagement",
+              url: "/clerk/user-management",
+            },
+          ],
+        },
       ],
     },
     {
