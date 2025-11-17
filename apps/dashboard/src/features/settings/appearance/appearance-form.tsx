@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { LOCALES, LOCALE_CODES, type LocaleCode } from "@mono/lib/locales";
 import { fonts } from "@mono/ui/config/font";
 import { Button } from "@mono/ui/core/button";
 import {
@@ -25,23 +24,22 @@ import {
   SelectValue,
 } from "@mono/ui/core/select";
 
+import { LOCALES, type LocaleCode } from "@/types/locales";
 import { useFont } from "@/components/context/font-provider";
 import { useTheme } from "@/hooks/use-theme";
-import { useT } from "@/hooks/use-translation";
 import { setAppearance } from "@/storage/local-storage";
 
 export function AppearanceForm() {
   const { font, setFont } = useFont();
   const { theme, setTheme } = useTheme();
-  const { i18n } = useTranslation();
-  const t = useT();
+  const { t, i18n } = useTranslation();
 
   const appearanceFormSchema = z.object({
     theme: z.enum(["light", "dark"], {
       message: t("Appearance.Theme.Validation"),
     }),
     font: z.enum(fonts),
-    locale: z.enum(LOCALE_CODES),
+    locale: z.enum(LOCALES.map((l) => l.code)),
   });
 
   type AppearanceFormValues = z.infer<typeof appearanceFormSchema>;

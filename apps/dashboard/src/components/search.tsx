@@ -1,10 +1,10 @@
 import { SearchIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { cn } from "@mono/lib/utils";
 import { Button } from "@mono/ui/core/button";
 
 import { useSearch } from "@/hooks/use-search";
-import { useT } from "@/hooks/use-translation";
 
 type SearchProps = {
   className?: string;
@@ -13,7 +13,7 @@ type SearchProps = {
 
 export function Search({ className }: SearchProps) {
   const { setOpen } = useSearch();
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <Button

@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "@tanstack/react-router";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -18,15 +19,13 @@ import {
 } from "@mono/ui/core/form";
 import { Input } from "@mono/ui/core/input";
 
-import { useT } from "@/hooks/use-translation";
-
 export function ForgotPasswordForm({
   className,
   ...props
 }: React.HTMLAttributes<HTMLFormElement>) {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const t = useT();
+  const { t } = useTranslation();
 
   const formSchema = z.object({
     email: z.email({

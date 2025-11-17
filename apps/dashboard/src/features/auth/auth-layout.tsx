@@ -1,19 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Home } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Logo } from "@mono/ui/assets/logo";
 import { Button } from "@mono/ui/core/button";
 
 import { LocaleSwitcher } from "@/components/locale-switch";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { useT } from "@/hooks/use-translation";
 
 type AuthLayoutProps = {
   children: React.ReactNode;
 };
 
 export function AuthLayout({ children }: AuthLayoutProps) {
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <div className="container grid h-svh max-w-none items-center justify-center">

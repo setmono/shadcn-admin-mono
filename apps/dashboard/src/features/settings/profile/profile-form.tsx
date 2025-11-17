@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { z } from "zod";
 
 import { Button } from "@mono/ui/core/button";
@@ -24,10 +25,9 @@ import {
 import { Textarea } from "@mono/ui/core/textarea";
 
 import { dataToast } from "@/components/data-toast";
-import { useT } from "@/hooks/use-translation";
 
 export function ProfileForm() {
-  const t = useT();
+  const { t } = useTranslation();
 
   const profileFormSchema = z.object({
     username: z

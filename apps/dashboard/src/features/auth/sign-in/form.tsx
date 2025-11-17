@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Loader2, LogIn } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -21,7 +22,6 @@ import { Input } from "@mono/ui/core/input";
 
 import { PasswordInput } from "@/components/password-input";
 import { useAuthStore } from "@/hooks/store/use-auth-store";
-import { useT } from "@/hooks/use-translation";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   redirectTo?: string;
@@ -35,7 +35,7 @@ export function UserAuthForm({
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { auth } = useAuthStore();
-  const t = useT();
+  const { t } = useTranslation();
 
   const formSchema = z.object({
     email: z.email({

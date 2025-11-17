@@ -7,7 +7,9 @@
     "build": "vite build && tsc",
     "start": "vite preview",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "interface": "i18next-resources-for-ts interface -i ./src/configs/i18n/resources/en -o ./src/types/resources.d.ts",
+    "locales": "i18next-resources-for-ts toc -i ./src/configs/i18n/resources -o ./src/configs/i18n/locales.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -40,6 +42,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
+    "i18next-resources-for-ts": "^1.7.4",
     "jsdom": "^27.0.0",
     "typescript": "^5.7.2",
     "vite": "^7.1.7",

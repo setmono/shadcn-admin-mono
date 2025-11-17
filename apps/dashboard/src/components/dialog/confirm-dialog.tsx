@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { cn } from "@mono/lib/utils";
 import {
   AlertDialog,
@@ -9,8 +11,6 @@ import {
   AlertDialogTitle,
 } from "@mono/ui/core/alert-dialog";
 import { Button } from "@mono/ui/core/button";
-
-import { useT } from "@/hooks/use-translation";
 
 type ConfirmDialogProps = {
   open: boolean;
@@ -41,7 +41,7 @@ export function ConfirmDialog(props: ConfirmDialogProps) {
     handleConfirm,
     ...actions
   } = props;
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <AlertDialog {...actions}>

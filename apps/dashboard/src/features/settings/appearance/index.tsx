@@ -1,10 +1,10 @@
-import { useT } from "@/hooks/use-translation";
+import { useTranslation } from "react-i18next";
 
 import { ContentSection } from "../components/content-section";
 import { AppearanceForm } from "./appearance-form";
 
 export function SettingsAppearance() {
-  const t = useT();
+  const { t } = useTranslation();
   return (
     <ContentSection
       title={t("UI.Appearance")}

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { cn } from "@mono/lib/utils";
 import { Button } from "@mono/ui/core/button";
@@ -9,8 +10,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@mono/ui/core/sidebar";
-
-import { useT } from "@/hooks/use-translation";
 
 export function AppTitle() {
   const { setOpenMobile } = useSidebar();
@@ -45,7 +44,7 @@ function ToggleSidebar({
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { toggleSidebar } = useSidebar();
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <Button

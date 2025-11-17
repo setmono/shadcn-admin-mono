@@ -21,7 +21,7 @@ import {
 
 import { ClerkLogo } from "@mono/ui/assets/clerk-logo";
 
-import { type SidebarData } from "./type";
+import { type SidebarData } from "@/types/sidebar";
 
 export const sidebarData: SidebarData = {
   user: {
@@ -71,24 +71,24 @@ export const sidebarData: SidebarData = {
           url: "/users",
           icon: Users,
         },
-        {
-          title: "SecuredByClerk",
-          icon: ClerkLogo,
-          items: [
-            {
-              title: "SignIn",
-              url: "/clerk/sign-in",
-            },
-            {
-              title: "SignUp",
-              url: "/clerk/sign-up",
-            },
-            {
-              title: "UserManagement",
-              url: "/clerk/user-management",
-            },
-          ],
-        },
+        // {
+        //   title: "SecuredByClerk",
+        //   icon: ClerkLogo,
+        //   items: [
+        //     {
+        //       title: "SignIn",
+        //       url: "/clerk/sign-in",
+        //     },
+        //     {
+        //       title: "SignUp",
+        //       url: "/clerk/sign-up",
+        //     },
+        //     {
+        //       title: "UserManagement",
+        //       url: "/clerk/user-management",
+        //     },
+        //   ],
+        // },
       ],
     },
     {

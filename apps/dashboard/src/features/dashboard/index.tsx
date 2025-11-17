@@ -1,12 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 import { Header } from "@/components/layout/header";
 import { TopNav } from "@/components/layout/top-nav";
 import { ProfileDropdown } from "@/components/profile-dropdown";
 import { Search } from "@/components/search";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { useT } from "@/hooks/use-translation";
 
 export function Dashboard() {
-  const t = useT();
+  const { t } = useTranslation();
 
   const topNav = [
     {

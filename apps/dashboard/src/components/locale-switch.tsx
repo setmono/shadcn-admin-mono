@@ -2,7 +2,6 @@ import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 
-import { LOCALES, type LocaleCode } from "@mono/lib/locales";
 import { Button } from "@mono/ui/core/button";
 import {
   DropdownMenu,
@@ -12,12 +11,11 @@ import {
   DropdownMenuTrigger,
 } from "@mono/ui/core/dropdown-menu";
 
-import { useT } from "@/hooks/use-translation";
+import { LOCALES, type LocaleCode } from "@/types/locales";
 import { setAppearance } from "@/storage/local-storage";
 
 export function LocaleSwitcher() {
-  const { i18n } = useTranslation();
-  const t = useT();
+  const { t, i18n } = useTranslation();
 
   const setLocale = (newLocale: LocaleCode) => {
     if (newLocale === i18n.language) return;

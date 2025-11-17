@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Check, Laptop, Moon, Sun, type LucideIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 
 import { Button } from "@mono/ui/core/button";
@@ -12,11 +13,10 @@ import {
 
 import type { Theme } from "@/components/context/theme-provider";
 import { useTheme } from "@/hooks/use-theme";
-import { useT } from "@/hooks/use-translation";
 
 export function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
-  const t = useT();
+  const { t } = useTranslation();
 
   const options: { key: Theme; icon: LucideIcon; label: string }[] = [
     { key: "light", icon: Sun, label: t("UI.Light") },

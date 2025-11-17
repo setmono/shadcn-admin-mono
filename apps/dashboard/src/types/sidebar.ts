@@ -1,5 +1,10 @@
 import { type LinkProps } from "@tanstack/react-router";
 
+import type Resources from "./resources";
+
+type SidebarKeys = keyof Resources["en-US"]["Sidebar"];
+export type SidebarTKey = `Sidebar.${SidebarKeys}`;
+
 type User = {
   name: string;
   email: string;
@@ -13,7 +18,7 @@ type Team = {
 };
 
 type BaseNavItem = {
-  title: string;
+  title: SidebarKeys;
   badge?: string;
   icon?: React.ElementType;
 };

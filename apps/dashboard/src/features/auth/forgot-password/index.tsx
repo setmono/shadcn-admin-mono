@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 
 import {
   Card,
@@ -10,12 +11,11 @@ import {
 } from "@mono/ui/core/card";
 
 import { AuthLayout } from "@/features/auth/auth-layout";
-import { useT } from "@/hooks/use-translation";
 
 import { ForgotPasswordForm } from "./form";
 
 export function ForgotPassword() {
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <AuthLayout>

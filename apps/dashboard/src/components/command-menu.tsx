@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight, Laptop, Moon, Sun } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import {
   CommandDialog,
@@ -16,13 +17,12 @@ import { ScrollArea } from "@mono/ui/core/scroll-area";
 import { sidebarData } from "@/fake/sidebar-data";
 import { useSearch } from "@/hooks/use-search";
 import { useTheme } from "@/hooks/use-theme";
-import { useT } from "@/hooks/use-translation";
 
 export function CommandMenu() {
   const navigate = useNavigate();
   const { setTheme } = useTheme();
   const { open, setOpen } = useSearch();
-  const t = useT();
+  const { t } = useTranslation();
 
   const runCommand = React.useCallback(
     (command: () => unknown) => {

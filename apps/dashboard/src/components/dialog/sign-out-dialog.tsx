@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 
 import { ConfirmDialog } from "@/components/dialog/confirm-dialog";
 import { useAuthStore } from "@/hooks/store/use-auth-store";
-import { useT } from "@/hooks/use-translation";
 
 interface SignOutDialogProps {
   open: boolean;
@@ -13,7 +13,7 @@ export function SignOutDialog({ open, onOpenChange }: SignOutDialogProps) {
   const navigate = useNavigate();
   const location = useLocation();
   const { auth } = useAuthStore();
-  const t = useT();
+  const { t } = useTranslation();
 
   const handleSignOut = () => {
     auth.reset();

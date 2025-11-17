@@ -1,5 +1,6 @@
 import { Outlet } from "@tanstack/react-router";
 import { Palette, UserCog } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Separator } from "@mono/ui/core/separator";
 
@@ -9,10 +10,9 @@ import { ProfileDropdown } from "@/components/profile-dropdown";
 import { Search } from "@/components/search";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SidebarNav } from "@/features/settings/components/sidebar-nav";
-import { useT } from "@/hooks/use-translation";
 
 export function Settings() {
-  const t = useT();
+  const { t } = useTranslation();
 
   const sidebarNavItems = [
     {

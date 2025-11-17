@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   Sidebar,
@@ -8,24 +9,23 @@ import {
   SidebarRail,
 } from "@mono/ui/core/sidebar";
 
+import type { BaseNavItem, SidebarData, SidebarTKey } from "@/types/sidebar";
 import { useLayout } from "@/components/context/layout-provider";
 // import { AppTitle } from './app-title'
 import { NavGroup } from "@/components/sidebar/nav-group";
 import { NavUser } from "@/components/sidebar/nav-user";
 import { TeamSwitcher } from "@/components/sidebar/team-switcher";
 import { sidebarData } from "@/fake/sidebar-data";
-import type { BaseNavItem, SidebarData } from "@/fake/type";
-import { useT, type AllTranslationKeys } from "@/hooks/use-translation";
 
 export function AppSidebar() {
   const { collapsible, variant } = useLayout();
-  const t = useT();
+  const { t } = useTranslation();
 
   const sidebarDataNew: SidebarData = useMemo(() => {
     const translateItem = <T extends BaseNavItem>(item: T): T => {
       const translated = {
         ...item,
-        title: t(`Sidebar.${item.title}` as AllTranslationKeys),
+        title: t(`Sidebar.${item.title}` as SidebarTKey),
       } as T;
 
       if ("items" in item && item.items) {
@@ -40,7 +40,7 @@ export function AppSidebar() {
       ...sidebarData,
       navGroups: sidebarData.navGroups.map((g) => ({
         ...g,
-        title: t(`Sidebar.${g.title}` as AllTranslationKeys),
+        title: t(`Sidebar.${g.title}` as SidebarTKey),
         items: g.items.map(translateItem),
       })),
     };

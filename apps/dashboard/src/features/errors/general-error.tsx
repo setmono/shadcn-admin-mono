@@ -1,14 +1,14 @@
 import { useNavigate, useRouter } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "@mono/ui/core/button";
 
 import { PageError } from "@/components/page-error";
-import { useT } from "@/hooks/use-translation";
 
 export function GeneralError() {
   const navigate = useNavigate();
   const { history } = useRouter();
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <PageError

@@ -6,6 +6,7 @@ import {
   Sparkles,
   UserCog,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@mono/ui/core/avatar";
 import {
@@ -26,7 +27,6 @@ import {
 
 import { SignOutDialog } from "@/components/dialog/sign-out-dialog";
 import { useDialog } from "@/hooks/use-dialog";
-import { useT } from "@/hooks/use-translation";
 
 type NavUserProps = {
   user: {
@@ -39,7 +39,7 @@ type NavUserProps = {
 export function NavUser({ user }: NavUserProps) {
   const { isMobile } = useSidebar();
   const [open, setOpen] = useDialog();
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <>

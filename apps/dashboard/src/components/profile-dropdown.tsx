@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { LogOut, Settings, UserCog } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { formatShortcut } from "@mono/lib/os-detecter";
 import { Avatar, AvatarFallback, AvatarImage } from "@mono/ui/core/avatar";
@@ -17,11 +18,10 @@ import {
 
 import { SignOutDialog } from "@/components/dialog/sign-out-dialog";
 import { useDialog } from "@/hooks/use-dialog";
-import { useT } from "@/hooks/use-translation";
 
 export function ProfileDropdown() {
   const [open, setOpen] = useDialog();
-  const t = useT();
+  const { t } = useTranslation();
 
   return (
     <>

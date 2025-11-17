@@ -12,7 +12,7 @@ import "@mono/ui/globals.css";
 import { FontProvider } from "@/components/context/font-provider.tsx";
 import { ThemeProvider } from "@/components/context/theme-provider.tsx";
 
-import "./i18n.ts";
+import "./configs/i18n/i18n.ts";
 
 const queryClient = new QueryClient();
 
