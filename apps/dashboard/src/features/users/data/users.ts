@@ -1,32 +1,4 @@
-export const users = Array.from({ length: 500 }, () => {
-  const firstName = randomItem(firstNames);
-  const lastName = randomItem(lastNames);
-
-  return {
-    id: uuid(),
-    firstName,
-    lastName,
-    username: randomUsername(firstName, lastName),
-    email: randomEmail(firstName),
-    phoneNumber: randomPhone(),
-    status: randomItem(["active", "inactive", "invited", "suspended"]),
-    role: randomItem(["admin", "cashier", "manager"]),
-    createdAt: randomPastDate(),
-    updatedAt: randomRecentDate(),
-  };
-});
-
-function randomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function randomInt(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function uuid() {
-  return crypto.randomUUID();
-}
+import { userListSchema, type User } from "./schema";
 
 const firstNames = [
   "James",
@@ -53,6 +25,33 @@ const lastNames = [
   "Rodriguez",
   "Martinez",
 ];
+
+export const users: User[] = userListSchema.parse(
+  Array.from({ length: 500 }, () => ({
+    id: uuid(),
+    firstName: randomItem(firstNames),
+    lastName: randomItem(lastNames),
+    username: randomUsername(randomItem(firstNames), randomItem(lastNames)),
+    email: randomEmail(randomItem(firstNames)),
+    phoneNumber: randomPhone(),
+    status: randomItem(["active", "inactive", "invited", "suspended"]),
+    role: randomItem(["admin", "cashier", "manager"]),
+    createdAt: randomPastDate(),
+    updatedAt: randomRecentDate(),
+  }))
+);
+
+function randomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function randomInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function uuid() {
+  return crypto.randomUUID();
+}
 
 function randomUsername(first: string, last: string) {
   return `${first}.${last}${randomInt(1, 999)}`.toLowerCase();
