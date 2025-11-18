@@ -3,9 +3,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
-import { Toaster } from "@mono/ui/core/sonner";
-
 import { NavigationProgress } from "@/components/layout/navigation-progress";
+import { Toaster } from "@/components/sonner";
 import { GeneralError } from "@/features/errors/general-error";
 import { NotFoundError } from "@/features/errors/not-found-error";
 

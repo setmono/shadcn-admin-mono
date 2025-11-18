@@ -1,6 +1,4 @@
-import resources from "@/configs/i18n/locales";
-
-export type LocaleCode = keyof typeof resources;
+export type LocaleCode = (typeof localeCodes)[number];
 
 export const LOCALES = [
   { code: "en-US", label: "English(US)", flag: "🇺🇸" },

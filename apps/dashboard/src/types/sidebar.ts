@@ -2,7 +2,7 @@ import { type LinkProps } from "@tanstack/react-router";
 
 import type Resources from "./resources";
 
-type SidebarKeys = keyof Resources["en-US"]["Sidebar"];
+type SidebarKeys = keyof Resources["translation"]["Sidebar"];
 export type SidebarTKey = `Sidebar.${SidebarKeys}`;
 
 type User = {
